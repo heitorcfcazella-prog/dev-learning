@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selecionar todos os elementos</title>
+</head>
+<body>
+  <p>Use querySelectorAll para selecionar todos os elementos de uma classe e conte quantos são.</p>
+  <p class="texto">Texto 1</p>
+  <p class="texto">Texto 2</p>
+  <p class="texto">Texto 3</p>
+  <p class="texto">Texto 4</p>
+  <p class="texto">Texto 5</p>
+  <script>
+    let todosTextos = document.querySelectorAll(".texto");
+    console.log(todosTextos.length);
+  </script>
+</body>
+</html>

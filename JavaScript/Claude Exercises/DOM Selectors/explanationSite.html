@@ -1,0 +1,27 @@
+<p>Seletores permitem acessar elementos HTML da página para manipulá-los com JavaScript</p>
+
+<div id="titulo"><title>Olá!</title></div>
+<br>
+<p class="texto">Parágrafo 1</p>
+<p class="texto">Parágrafo 2</p>
+
+
+<script>
+  // Seleciona por ID
+  let titulo = document.getElementById("titulo");
+  console.log(titulo.textContent);
+
+  // Seleciona o PRIMEIRO elemento que corresponde
+  let primeiroTexto = document.querySelector(".texto");
+  console.log(primeiroTexto);
+  let tituloPorQuery = document.querySelector("#titulo");
+  console.log(tituloPorQuery);
+
+  // Seleciona TODOS os textos
+  let todosTextos = document.querySelectorAll(".texto")
+
+  // Iterando sobre querySelectorAll
+  todosTextos.forEach(elemento => {
+    console.log(elemento.textContent);
+  });
+</script>
