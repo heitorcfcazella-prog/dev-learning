@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p><strong>Após selecionar elementos, podemos modificar seu conteúdom estilo e atributos</strong></p>
+  <div id="caixa">Texto original</div>
+  <div id="texto"></div>
+  <script>
+    let caixa = document.getElementById("caixa");
+    // altera apenas o texto
+    caixa.textContent = "Novo Texto";
+    // latera HTML interno
+    caixa.innerHTML = "<strong>Texto em negrito</strong>";
+    // style - modifica o CSS
+    caixa.style.color = "blue";
+    caixa.style.backgroundColor = "yellow";
+    caixa.style.fontSize = "20px";
+    // define e lê atributos
+    caixa.setAttribute("data-info", "importante");
+    caixa.setAttribute("title", "Passe o mouse aqui");
+    let info = caixa.getAttribute("data-info");
+    console.log(info);
+
+    if (info == "importante"){
+      texto.textContent = `Isso é ${info}!`;
+    }
+    else {
+      texto.textContent = `Isso não é ${info}!`
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>Modifique o estilo de múltiplos elementos usando querySelectorAll e forEach</p>
+  <p id="estilo">Texto 1</p>
+  <p id="estilo">Texto 2</p>
+  <p id="estilo">Texto 3</p>
+  <script>
+    let todosTextos = document.querySelectorAll("#estilo");
+    todosTextos.forEach(elemento => {
+      elemento.style.color = "red";
+      elemento.style.backgroundColor = "yellow";
+      elemento.style.textAlign = "center";
+      elemento.style.fontFamily = "Arial";
+    });
+  </script>
+</body>
+</html>
