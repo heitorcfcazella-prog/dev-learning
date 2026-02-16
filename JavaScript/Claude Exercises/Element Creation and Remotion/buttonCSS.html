@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>Adicione um botão que, ao ser criado, tenha um texto e uma classe CSS</p>
+  <div id="container">
+
+  </div>
+
+  <script>
+    let botao = document.createElement("button");
+    botao.style.color = "red";
+    botao.textContent = "CLIQUE NO BOTÃO";
+
+    let container = document.getElementById("container")
+    container.appendChild(botao);
+  </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>Crie uma lista (ul) com 5 itens (il) via JS e adicione ao body</p>
+  <script>
+    let lista = document.createElement("ul");
+    let itens = "";
+
+    for (let i = 1; i <= 5; i++) {
+      itens += `<li>${i}</li>`;
+    }
+    lista.innerHTML = itens;
+    document.body.appendChild(lista);
+  </script>
+</body>
+</html>

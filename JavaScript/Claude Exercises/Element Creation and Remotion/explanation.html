@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>JavaScript permite criar novos elementos HTML dinamicamente e adicioná-los ou removê-los da página</p>
+  <div id="container"></div>
+  <p id="ref">Referencia</p>
+
+  <script>
+    let novoParagrafo = document.createElement("p");
+    novoParagrafo.textContent = "Este é um parágrafo novo";
+    novoParagrafo.style.color = "green";
+
+    let container = document.getElementById("container");
+    container.appendChild(novoParagrafo);
+
+    let novaDiv = document.createElement("div");
+    novaDiv.className = "destaque";
+    novaDiv.innerHTML = "<h2>Título</h2><p>Conteúdo</p>";
+    document.body.appendChild(novaDiv);
+
+    //Removendo
+    let elementoParaRemover = document.querySelector(".remover");
+    if (elementoParaRemover){
+      elementoParaRemover.remove();
+    }
+    
+    // adiciona antes de outro elemento
+    let referencia = document.getElementById("ref");
+    let novo = document.createElement("span");
+    novo.textContent = "Antes da referência";
+    referencia.parentNode.insertBefore(novo, referencia);
+
+  </script>
+</body>
+</html>

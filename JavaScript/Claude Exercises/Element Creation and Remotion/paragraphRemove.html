@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Remova o terceiro parágrafo de uma página que tenha vários parágrafos</h1>
+    <p>Parágrafo 1</p>
+    <p>Parágrafo 2</p>
+    <p>Parágrafo 3</p>
+    <p>Parágrafo 4</p>
+    <p>Parágrafo 5</p>
+    <p>Parágrafo 6</p>
+  </div>
+
+  <script>
+    let paragrafos = document.querySelectorAll("p");
+    if (paragrafos.length >= 3){
+      paragrafos[2].remove();      
+    }
+
+  </script>
+</body>
+</html>
