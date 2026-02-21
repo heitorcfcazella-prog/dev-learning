@@ -1,0 +1,56 @@
+[
+  {
+    "id": 101,
+    "img": "./imagens/caneta_bic.jpg",
+    "nome": "Caneta Bic Azul",
+    "preco": 1.50
+  },
+  {
+    "id": 102,
+    "img": "./imagens/caderno.png",
+    "nome": "Caderno 96 folhas",
+    "preco": 6.20
+  },
+  {
+    "id": 103,
+    "img": "./imagens/régua.png",
+    "nome": "Régua",
+    "preco": 2.00
+  },
+  {
+    "id": 104,
+    "img": "./imagens/cola.jpg",
+    "nome": "Cola",
+    "preco": 3.75
+  },
+  {
+    "id": 105,
+    "img": "./imagens/tesoura.jpg",
+    "nome": "Tesoura",
+    "preco": 6.90
+  },
+  {
+    "id": 106,
+    "img": "./imagens/apontador.jpg",
+    "nome": "Apontador",
+    "preco": 3.90
+  },
+  {
+    "id": 107,
+    "img": "./imagens/caixa_lápis.jpg",
+    "nome": "Caixa Lápis",
+    "preco": 19.00
+  },
+  {
+    "id": 108,
+    "img": "./imagens/sulfite.png",
+    "nome": "Pacote Papel A4",
+    "preco": 25.00
+  },
+  {
+    "id": 109,
+    "img": "./imagens/pasta.jpg",
+    "nome": "Pasta",
+    "preco": 15.00
+  }
+]
