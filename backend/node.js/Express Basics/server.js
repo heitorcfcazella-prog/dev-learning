@@ -5,6 +5,8 @@ const path = require('path');
 const port = process.env.PORT || 8000;
 const posts = require('./routes/post');
 const logger = require('./middleware/login');
+const errorHandler = require('./middleware/error');
+const notFound = require('./middleware/notFound')
 
 const app = express();
 
@@ -35,5 +37,9 @@ app.get('/about', (req, res) => {
 
 //Rota
 app.use('/api/posts', posts);
+
+//Erro
+app.use(errorHandler);
+app.use(notFound);
 
 app.listen(port, () => console.log(`Servidor está rodando na porta ${port}`));

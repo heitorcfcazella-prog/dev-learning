@@ -29,12 +29,14 @@ router.get('/', (req, res) => {
 });
 
 // Pegar um post
-router.get('/:id', (req, res) => {
+router.get('/:id', (req, res, next) => {
   const id = parseInt(req.params.id)
   const post = posts.find((post) => post.id === id);
   
   if (!post){
-    return res.status(404).json({msg: `Um post com o ID: ${id} não foi encontrado`})
+    const error = new Error(`Um post com o ID: ${id} não foi encontrado`);
+    error.status = 404;
+    return next(error);
   }
   
   // else{
@@ -47,14 +49,16 @@ router.get('/:id', (req, res) => {
 
 
 //Criar novo post
-router.post('/', (req, res) => {
+router.post('/', (req, res, next) => {
   const newPost = {
     id: posts.length + 1,
     title: req.body.title
   };
 
   if(!newPost.title){
-    return res.status(400).json({ msg: 'Coloca um título, pufavo'})
+    const error = new Error(`Coloca o titulo ai fi`);
+    error.status = 400;
+    return next(error);
   }
 
   posts.push(newPost);
@@ -64,12 +68,14 @@ router.post('/', (req, res) => {
 });
 
 //Atualizar o post
-router.put('/:id', (req, res) => {
+router.put('/:id', (req, res, next) => {
   const id = parseInt(req.params.id);
   const post = posts.find((posts) => posts.id === id);
 
   if (!post){
-    return res.status(404).json({msg: `Um post com o ID: ${id} não foi encontrado`});
+    const error = new Error(`Um post com o ID: ${id} não foi encontrado`);
+    error.status = 404;
+    return next(error);
   }
 
   post.title = req.body.title;
@@ -77,12 +83,14 @@ router.put('/:id', (req, res) => {
 });
 
 //Deletar o post
-router.delete('/:id', (req, res) => {
+router.delete('/:id', (req, res, next) => {
   const id = parseInt(req.params.id);
   const post = posts.find((posts) => posts.id === id);
 
   if (!post){
-    return res.status(404).json({msg: `Um post com o ID: ${id} não foi encontrado`});
+    const error = new Error(`Um post com o ID: ${id} não foi encontrado`);
+    error.status = 404;
+    return next(error);
   }
 
   posts = posts.filter((post) => post.id !== id);
