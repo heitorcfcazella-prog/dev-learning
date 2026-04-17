@@ -39,7 +39,7 @@ app.get('/about', (req, res) => {
 app.use('/api/posts', posts);
 
 //Erro
-app.use(errorHandler);
 app.use(notFound);
+app.use(errorHandler);
 
 app.listen(port, () => console.log(`Servidor está rodando na porta ${port}`));
