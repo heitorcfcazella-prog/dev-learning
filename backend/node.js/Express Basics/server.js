@@ -18,12 +18,13 @@ app.use(express.urlencoded({ extended: false}));
 // Middleware do logger
 app.use(logger);
 
-/*
+
 //setup pasta estática
 //coloca .html no final da página que não seja a principal
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+/*
 
 app.get('/', (req, res) => {
   //res.send('<h1 style="font-family: Arial;">Olá Mundo!</h1>');
