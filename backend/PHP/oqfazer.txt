@@ -1,0 +1,5 @@
+usar o arquivo index.php para fazer uma página que 
+redireciona para as páginas com as explicações de cada matéria
+(React?)
+
+posso fazer isso para todos os outros estudos que já fiz
