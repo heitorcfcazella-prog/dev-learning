@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="output.css">
+  <title>Custom Styles</title>
+</head>
+<body>
+  <p>1. Inline</p>
+  <h1 class="text-chestnut bg-stone-100 p-2">Cor Inline</h1>
+  <p class="p-[16px] text-[36px] text-[#21a30f] bg-zinc-50">Mais customizado ainda</p>
+  <p>2. Config</p>
+  <p>criar cores customizadas no @theme pelo input.css (ver Theme variable namespaces na documentação)</p>
+  <p class="font-bold">Ex: </p>
+  <p>@theme{
+    --color-chestnut: #973F29;
+    }
+  </p> fronha, ivanhoe, paninho, viseira, coisas do traveseiro e camiseta
+  <h1 class="text-chestnut bg-stone-300 p-4">Cor no Theme</h1>
+  Base: aplica globalmente <br>
+  Components: estiliza coisas especificas <br>
+  Utilities: atomicos, para uma variavel em especifico (margin, padding, etc) <br>
+  @apply: coloca tailwind em css padrão <br>
+  <div class="card">
+    <h1>Titulo</h1>
+    <p>Texto</p>
+  </div>
+
+  <p>Bibliotecas de componentes</p>
+  <ul class="text-center">
+    <li>Shadcn/ui</li>
+  </ul>
+
+</body>
+</html>
