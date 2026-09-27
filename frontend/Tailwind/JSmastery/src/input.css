@@ -5,6 +5,9 @@
 }
 
 @layer base{
+  body{
+    @apply bg-blue-300;
+  }
   h1{
     @apply text-center text-blue-600 font-bold pt-2;
   }

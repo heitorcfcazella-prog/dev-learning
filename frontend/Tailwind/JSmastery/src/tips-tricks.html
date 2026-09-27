@@ -7,6 +7,62 @@
   <title>Tips and Tricks</title>
 </head>
 <body>
+  <div>
+    <h1>Personalizar a cor principal dos itens</h1>
+  <p>Os navegadores tem por padrão para itens como Checkbox, 
+    Radio Buttons, etc. Normalmente com ela sendo azul, 
+    o Tailwind CSS permite customizar isso</p>
+    <label><input type="checkbox" checked>Padrão</label><br>
+    <label><input type="checkbox" class="accent-green-500" checked>Customizado</label>
+  </div>
+  <div>
+    <h1>Texto fluido/ajustavel</h1>
+    <p>Versão 1:</p>
+    <p class="sm:text-7xl text-5xl">Texto</p>
+    <p>Versão 2:</p>
+    <p class="text-[min(10vw,70px)]">Texto diferente</p>
+  </div>
+  <div>
+    <h1>Estilizar input de arquivos</h1>
+    <p>Coloca file: na hora de codar</p>
+    <label class="my-4 block">
+      <input type="file" class="block w-full text-sm 
+      text-slate-500 file:mr-4 file:rounded-full file:border-0
+      file:bg-violet-50 file:px-4 file:py-2 file:text-sm
+      file:font-semibold file:text-violet-700 hover:file:bg-violet-100">
+    </label>
+  </div>
+  <div>
+    <h1>Destacar/selecionar coisas</h1>
+    <p>selection: , o primeiro com o bg (onde ficaria azul)
+      e outro com a cor do texto
+    </p>
+    <div class="selection:bg-purple-900 selection:text-white">
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident dolorem, atque maxime tempore sequi possimus qui distinctio! Expedita sapiente amet dolor neque deleniti eos accusamus unde nemo! Non, ipsum cupiditate?</p>
+    </div>
+  </div>
+  <div>
+    <h1>Usar menos JS</h1>
+    <p>Permite fazer coisas que dependeriam do JS só com o Tailwind (como "sanfonas")</p>
+    <div class="max-w-lg mx-auto p-8">
+      <details class="open:bg-white dark:open:bg-slate-900
+      open:ring-1 open:ring-black/5 dark:open:ring-white/10
+      open:shadow-lg p-6 rounded-lg" open>
+        <summary class="text-sm leading-6 text-slate-900 dark:text-white
+        font-semibold select-none">
+          Texto aleatorio do balacubaco
+        </summary>
+        <div class="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores totam aut perferendis repudiandae. Saepe in, facilis ratione, quam aut, ipsum rem veniam quis modi alias optio provident maiores accusamus excepturi.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+  <div>
+    <h1>Caret</h1>
+    <p>O ponto que do cursor que fica piscando quando você está digitando</p>
+    <textarea class="w-full caret-purple-600 p-2 text-blue-950" placeholder="Digite algo daora..."></textarea>
+  </div>
   <a href="index.html">Volte para o começo</a>
 </body>
 </html>
